@@ -1,0 +1,57 @@
+
+<ion-header hidebackbutton>
+  <ion-navbar color=primary>
+  <ion-title>
+  Log In
+  </ion-title>
+
+  </ion-navbar>
+ </ion-header>
+ <ion-content class="bg-img" padding>
+  <img src="../../assets/imgs/avatar.jpg" class="avatar" sizes="4" offset="4">
+
+  <form [formGroup]="todo" >
+
+<ion-list class="list">
+ <ion-item class="no-bg-color">
+   <ion-label floating >Email</ion-label>
+   <ion-input
+    type=email
+     formControlName="email"
+     [(ngModel)]="email"
+      ></ion-input>
+ </ion-item>
+ <ion-item class="no-bg-color">
+   <ion-label floating >Password</ion-label>
+   <ion-input
+      type=password
+     formControlName="password"
+     [(ngModel)]="password"
+     ></ion-input>
+     <p *ngIf="" > short password</p>
+ </ion-item>
+     <p class="Forget">Forget the password?</p>
+
+ <ion-item class="no-bg-color">
+   <button
+   ion-button
+   color=primary
+    round
+   large
+    full
+    type="submit"
+    [disabled]="!todo.valid"
+    (click)=checkUser(email,password) > Sign In</button>
+ </ion-item>
+ </ion-list>
+</form>
+
+   <ion-list >
+
+     <ion-item class="no-bg-color">
+       <button ion-button color=secondary round  full (click)=signuppage() > Don' have Account Sign Up</button>
+     </ion-item>
+     </ion-list>
+</ion-content>
+
+

@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button  (click)="logout()">
+        Log Out
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div class=newPost> 
+    <ion-label fixed>Newpost</ion-label>
+    <ion-input [(ngModel)]="sharedpost" type=text class="inputpost"></ion-input>
+    <button ion-button color=primary block (click)=sharepost(sharedpost)>Share</button>
+
+</div>
+         <ion-list>
+            <ion-card *ngFor="let post of posts">
+
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="../../assets/imgs/avatar.jpg">
+                </ion-avatar>
+                <h2>{{post.name}}</h2>
+                <p>{{post.date}}</p>
+              </ion-item>
+            
+              <ion-card-content>
+                <p>{{post.postdesc}}.</p>
+              </ion-card-content>
+            
+              <ion-row>
+                <ion-col>
+                  <button ion-button icon-start clear small>
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    <div>{{post.likesnum}} Likes</div>
+                  </button>
+                </ion-col>
+                <ion-col>
+                  <button ion-button icon-start clear small>
+                    <ion-icon name="text"></ion-icon>
+                    <div>{{post.commentsnum}} Comments</div>
+                  </button>
+                </ion-col>
+              </ion-row>
+            
+            </ion-card>
+          </ion-list>
+</ion-content>

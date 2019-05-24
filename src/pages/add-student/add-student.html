@@ -1,0 +1,63 @@
+
+<ion-header>
+
+  <ion-navbar color=primary>
+
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="bg-img no-scroll" padding>
+    <form [formGroup]="todo" (ngSubmit)="addUser()" >
+  <ion-list>
+      <ion-item class="no-bg-color">
+          <ion-label floating >Name</ion-label>
+          <ion-input type=text  formControlName="name"></ion-input>
+
+        </ion-item>
+    <ion-item class="no-bg-color">
+        <ion-label floating >Phone</ion-label>
+        <ion-input type=number  formControlName="phone"></ion-input>
+      </ion-item>
+
+    <ion-item class="no-bg-color">
+      <ion-label floating >Email</ion-label>
+      <ion-input type=email  formControlName="email"></ion-input>
+    </ion-item>
+
+
+    <ion-item class="no-bg-color">
+      <ion-label floating >Password</ion-label>
+      <ion-input type=password  formControlName="password"></ion-input>
+    </ion-item>
+    <ion-item class="no-bg-color">
+        <ion-label floating >Password confirm</ion-label>
+        <ion-input type=password formControlName=passwordc></ion-input>
+
+      </ion-item>
+
+    <ion-item class="no-bg-color">
+      <button ion-button
+       color=primary
+       round large
+       full
+       type="submit"
+       [disabled]="!todo.valid"
+       (click)=addUser()>Sign Up</button>
+    </ion-item>
+    </ion-list>
+  </form>
+    <ion-list>
+
+      <ion-item class="no-bg-color">
+        <button ion-button color=secondary round  full  (click)=signinPage() >already have Account Sign In</button>
+      </ion-item>
+      
+      <ion-item class="no-bg-color">
+        <button ion-button color=secondary round  full   >Add one Addmin</button>
+      </ion-item>
+      </ion-list>
+
+</ion-content>

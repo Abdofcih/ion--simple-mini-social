@@ -1,0 +1,33 @@
+page-signin {
+
+    .bg-img{
+        background-image: url(../../assets/imgs/pic02.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover
+         }
+         .no-scroll .scroll-content{
+           overflow: hidden;
+         }
+         .logimg{
+            position: relative;
+            text-align: center;
+         }
+         .avatar{
+            
+            top: 25%;
+            right: 40%;
+            display: inline;
+            width: 20%;
+            border-radius: 50%;
+        }
+        .no-bg-color{
+            background-color:rgba(255, 255, 255, 0.00);
+        }
+        .Forget{
+            color: #635f5f;
+            text-align: center;
+            border: 2px #635f5f ;
+            margin-top: 30px;
+          }
+}

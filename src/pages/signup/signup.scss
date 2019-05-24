@@ -1,0 +1,17 @@
+page-signup {
+    .bg-img{
+        background-image: url(../../assets/imgs/pic02.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover
+         }
+         .no-scroll .scroll-content{
+           overflow: hidden;
+         }
+         .avatar{
+           margin: 5vh auto;
+          display: block;
+          width: 30%
+         }
+     
+}
